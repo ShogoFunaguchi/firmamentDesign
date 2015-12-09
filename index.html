@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Beyond the sky into the firmament</title>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    #sidebar ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    #sidebar li{
+      display:inline;
+      padding:0;
+      margin:0;
+    }
+    #sidebar li a{
+      display:block;
+      border:1px solid;
+      padding: 3px 10px;
+      width:auto;
+      margin:2px 0px;
+
+    }
+    #messageForYou{
+      border:double 1px white;
+    }
+    #messageForYou p{
+      text-align:cetner;
+      font-size:25px;
+      color: white;
+      text-shadow: 1px 1px 1px black;
+    }
+    h1{
+      border:1px double white;
+      text-shadow: 1px 1px 2px black;
+      margin:0;
+      border-radius:4px;
+
+      background: linear-gradient(to bottom, #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+    #article h3{
+      text-shadow:1px 1px 2px black;
+      text-align:center;
+      border:double white;
+    }
+    #dropdown1 li{
+      padding:1px 1px;
+      width:100px;
+      text-align:center;
+      font-size:15px;
+    }
+    #titelMessage{
+      text-align:center;
+      font-size:30px;
+      border:double white;
+      text-shadow:1px 1px 1px black;
+    }
+    .rabitIcon{
+      margin:0px 30px 0px;
+      background-color: Aquamarine;
+      border:2px double white;
+      border-radius:20px;
+      box-shadow:5px 5px 5px rgba(0,0,0,0.4);
+      padding:10px;
+      width:60px;
+      height:80px;
+    }
+
+  </style>
+  <script>
+  $(document).ready(function(){
+    $('.modal-trigger').leanModal();
+    $(".dropdown-button").dropdown();
+    $('.parallax').parallax();
+  });
+  </script>
+</head>
+<body>
+<div class='row'>
+  <div class='col s4'>
+    <div class='card'>
+      <div class='card-image'>
+        <img src='img/moon.jpg' class='card'>
+        <span class='card-title'>welcome to code world</span>
+      </div>
+      <div class='card-content'>
+        <p>Practicing programing is up to you<p>
+      </div>
+    </div>
+  </div>
+
+  <div id='TopTitle' class='card-panel grey lighten-5 col s18'>
+    <div class='card-panel blue lighten-5 white-text center-align row'>
+      <h1 class='card-panel'><img src='img/rabiv2.png' class='rabitIcon '>-My firmament-<img src='img/rabiv2.png'  class='rabitIcon'></h1>
+    </div>
+    <div id='titelMessage' class='card-panel blue lighten-5 white-text'>beyond the sky ,into the firmament</div>
+  </div>
+</div>
+
+<div class="parallax-container">
+  <div class="parallax"><img src="img/firmament.jpg"></div>
+</div>
+
+
+<div class='row'>
+<div id='sidebar'class='col s3 card-panel grey lighten-5 container'>
+  <ul>
+    <li><a class='waves-effect waves-light btn modal-trigger' data-target='modalMyself'>about me</a></li>
+    <li><a class='waves-effect waves-light btn' href='#'>how about</a></li>
+    <li><a class='waves-effect waves-light btn dropdown-button' data-activates='dropdown2'>contents</a></li>
+  </ul>
+  <div id='messageForYou' class='card-panel blue lighten-5'>
+    <div class='card-panel grey lighten-5'>
+      <img src='img/rabiv2.png'  style='width:100%; height:100%; border:1px double white' class='card-panel blue lighten-4 center'></img>
+      <p>if you would like to improve your skill,why not do that?</p></div>
+  </div>
+</div>
+<div class='col s6'>
+  <nav class='card-panel blue lighten-5' style='border:double; text-shadow:1px 1px 1px black'>
+    <div id='menu' class='white-text'>
+      <ul>
+        <li><a>Top page</a></li>
+      </ul>
+    </div>
+    <div id='snsIcons' class='right white-text'>
+      <a class='btn-floating waves-effect waves-light blue lighten-3 center-align'>Tw</a>
+      <a class='btn-floating waves-effect waves-light blue lighten-3 center-align'>FB</a>
+      <a class='btn-floating waves-effect waves-light blue lighten-3 center-align'>Ha</a>
+    </div>
+  </nav>
+  <div id='main' class='card-panel'>
+    <div id='article'>
+      <h3 class='articleTitle card-panel blue lighten-5 white-text'>jQueryで作ってみよう!!</h3>
+      <div id='articleBG' class='card-panel grey lighten-5'>
+        <p>さて今回はjQueryを使ってadd機能を実装していきましょう。</p><br>
+        <strong>②add機能を実装する</strong>
+        <p>
+          さてタイトル通り、inputに入力した文字をul内にliとして追加するaddの機能を実装してみましょう。
+          目標はこんな感じです。
+        </p><br>
+
+        <div class="runstant"><iframe width="100%" height="320px" style="border: 0px; box-shadow: 0px 0px 2px 0px #aaa;" src="http://goo.gl/gnfDd5"></iframe></div><br>
+
+        <p>さてプログラムを見てみましょう。....</p>
+      </div>
+    </div>
+
+    <div id='feeedback' class='card-panel'>
+      <p>コメント欄です。名前とコメントが入れられるようにします</p>
+    </div>
+    <form>
+      <textarea class='materialize-textarea'></textarea>
+      <div id='button'>
+        <button class='waves-effect waves-light btn'>書き込む</button>
+        <button class='waves-effect waves-light btn'>キャンセル</button>
+      </div>
+    </form>
+    <ul class="pagination center">
+      <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+      <li class="active  blue lighten-5"><a href="#!">1</a></li>
+      <li class="waves-effect"><a href="#!">2</a></li>
+      <li class="waves-effect"><a href="#!">3</a></li>
+      <li class="waves-effect"><a href="#!">4</a></li>
+      <li class="waves-effect"><a href="#!">5</a></li>
+      <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
+  </div>
+</div>
+
+<div id='rightSidebar' class='col s3'>
+  <div class='card-panel white'>
+    <p>このカテゴリーのその他の記事</p>
+    <div id='oldArticle' class='card-panel'>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer class="page-footer blue lighten-5">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">PracticePrograming</h5>
+        <p class="grey-text text-lighten-4">let's practice</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Phiary</a></li
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2015 Copyright sho@PP
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>
+</footer>
+
+<div id="modalMyself" class='modal'>
+  <div class='modal-content'>
+    <h4 class='card-panel'style='text-align:center;'>ABOUT ME</h4>
+    <p style='text-align:center;'>
+      しがない文学部生のプログラミング成長備忘録です<br>
+      フロントエンジニア目指して日々修行中です<br>
+      毎週水曜日更新予定！<br>
+      週で学んだ備忘録、技術エントリーなど、需要は気にせず気ままに自由に更新予定！<br>
+    </p>
+  </div>
+  <div class='modal-footer'>
+    <a href="#!" class='modal-action modal-close waves-effect waves-green flat-btn right'>close</a>
+  </div>
+</div>
+
+<ul id='dropdown1' class="dropdown-content">
+  <li><a class='card-panel teal'>ToDoList</a></li>
+  <li class="divider"></li>
+  <li><a class='card-panel teal'>ゲームを作ろう</a></li>
+</ul>
+
+<ul id='dropdown2' class='dropdown-content'>
+  <li><a class='dropdown-button' data-activates='dropdown1'>作ってみよう！</a></li>
+  <li><a>備忘録</a></li>
+  <li><a>CG</a></li>
+  <li><a>works</a></li>
+</ul>
+</body>
+</html>
